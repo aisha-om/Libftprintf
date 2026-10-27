@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by aabufarw.*
+*This project has been created as part of the 42 curriculum by aabuFarw.*
 
 # ft_printf
 
