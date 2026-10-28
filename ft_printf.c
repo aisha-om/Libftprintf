@@ -6,7 +6,7 @@
 /*   By:  aabufarw <aabufarw@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 22:38:57 by  aabufarw         #+#    #+#             */
-/*   Updated: 2026/10/27 22:38:59 by  aabufarw        ###   ########.fr       */
+/*   Updated: 2026/10/28 13:09:43 by  aabufarw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 
 int	ft_printf(const char *ip, ...)
 {
-	t_list	*st;
+	t_list	st;
 	int		tmp;
 
-	st = (t_list *) malloc(sizeof(t_list));
 	tmp = 0;
-	st->i = 0;
-	st->ret = 0;
-	va_start(st->ap, ip);
-	while (ip[st->i])
+	st.i = 0;
+	st.ret = 0;
+	va_start(st.ap, ip);
+	while (ip[st.i])
 	{
-		if (ip[st->i] == '%')
+		if (ip[st.i] == '%')
 		{
-			if (ip[++st->i] == '%')
-				ft_putchar(ip[st->i], 1, &st->ret, &st->i);
+			if (ip[++st.i] == '%')
+				ft_putchar(ip[st.i], 1, &st.ret, &st.i);
 			else
-				ft_format(st, ip);
+				ft_format(&st, ip);
 		}
 		else
-			ft_putchar_fd(ip[st->i++], 1, &st->ret);
+			ft_putchar_fd(ip[st.i++], 1, &st.ret);
 	}
-	va_end(st->ap);
-	tmp = st->ret;
-	free(st);
+	va_end(st.ap);
+	tmp = st.ret;
 	return (tmp);
 }
 
