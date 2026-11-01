@@ -57,7 +57,7 @@ int main(void)
 Compile your code alongside `libftprintf.a`:
 
 ```bash
-gcc -Wall -Wextra -Werror main.c -L. -lftprintf -o program
+cc  main.c  libftprintf.a  -o program
 ./program
 ```
 
@@ -84,9 +84,7 @@ gcc -Wall -Wextra -Werror main.c -L. -lftprintf -o program
 
 * [Linux Manual Page: printf(3)](https://man7.org/linux/man-pages/man3/printf.3.html)
 * [C Reference: Variadic functions (`stdarg.h`)](https://en.cppreference.com/w/c/variadic)
-* [42 School Norminette Rules](https://github.com/42School/norminette)
 
 ### AI Usage
 
-* **Tasks:** Formatting, structuring, and generating the documentation content for `README.md` according to the 42 subject requirements.
 * **Parts of Project:** Documentation generation only (no implementation code was written by AI).

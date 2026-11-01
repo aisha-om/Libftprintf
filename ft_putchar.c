@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By:  aabufarw <aabufarw@student.42.fr>         +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/27 22:37:34 by  aabufarw         #+#    #+#             */
-/*   Updated: 2026/10/27 22:37:35 by  aabufarw        ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_putchar.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By:  aabufarw <aabufarw@student.42.fr>        #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/10/27 22:37:34 by  aabufarw        #+#    #+#              */
+/*   Updated: 2026/11/01 23:03:35 by  aabufarw       ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c, int fd, size_t *ret, size_t *i)
+void	ft_putchar(char c, int fd, size_t *ret)
 {
 	write(fd, &c, 1);
 	*ret = *ret + 1;
-	*i = *i + 1;
 }

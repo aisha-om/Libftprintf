@@ -6,7 +6,7 @@
 /*   By:  aabufarw <aabufarw@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 22:36:20 by  aabufarw         #+#    #+#             */
-/*   Updated: 2026/10/27 22:36:23 by  aabufarw        ###   ########.fr       */
+/*   Updated: 2026/10/28 19:08:34 by  aabufarw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *str)
 {
 	size_t	l;
 
+	if (!str)
+		return (0);
 	l = 0;
 	while (str[l])
 		l++;

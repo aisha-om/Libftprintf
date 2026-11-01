@@ -11,10 +11,10 @@ SRCS =	ft_printf.c\
 		ft_strlen.c\
 		ft_putptr.c\
 
-CC = cc 
-CFLAGS = -Wall -Wextra -Werror
-AR = ar -rcs
-OBJS = ${SRCS:%.c=%.o}
+CC 		= cc 
+CFLAGS  = -Wall -Wextra -Werror
+AR 		= ar -rcs
+OBJS	= ${SRCS:%.c=%.o}
 RM		= rm -f
 
 all: ${NAME}
@@ -32,4 +32,3 @@ fclean:	clean
 
 re:	fclean all 
 .PHONY:	all clean fclean re
-

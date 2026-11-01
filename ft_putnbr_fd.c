@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By:  aabufarw <aabufarw@student.42.fr>         +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/27 22:37:08 by  aabufarw         #+#    #+#             */
-/*   Updated: 2026/10/27 22:37:10 by  aabufarw        ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_putnbr_fd.c                                    :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By:  aabufarw <aabufarw@student.42.fr>        #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/10/27 22:37:08 by  aabufarw        #+#    #+#              */
+/*   Updated: 2026/11/01 23:18:21 by  aabufarw       ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_fd(int n, int fd, size_t *ret, size_t *i)
+void	ft_putnbr_fd(int n, int fd, size_t *ret)
 {
 	if (n < 0)
 	{
@@ -25,8 +25,6 @@ void	ft_putnbr_fd(int n, int fd, size_t *ret, size_t *i)
 		n = 147483648;
 	}
 	if (n > 9)
-		ft_putnbr_fd(n / 10, fd, ret, i);
+		ft_putnbr_fd(n / 10, fd, ret);
 	ft_putchar_fd(n % 10 + 48, fd, ret);
-	if (n < 10)
-		*i = *i + 1;
 }
