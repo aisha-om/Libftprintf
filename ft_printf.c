@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_printf.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By:  aabufarw <aabufarw@student.42.fr>        #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/27 22:38:57 by  aabufarw        #+#    #+#              */
-/*   Updated: 2026/11/01 23:28:14 by  aabufarw       ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aabufarw <aabufarw@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/27 22:38:57 by  aabufarw         #+#    #+#             */
+/*   Updated: 2026/11/03 14:22:31 by aabufarw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	ft_handle_format(t_list *st, const char *ip)
 void	ft_format(t_list *st, const char *ip)
 {
 	if (ip[st->i] == 'c')
-		ft_putchar(va_arg(st->ap, int), 1, &st->ret);
+		ft_putchar_fd(va_arg(st->ap, int), 1, &st->ret);
 	else if (ip[st->i] == 's')
 		ft_putstr_fd(va_arg(st->ap, char *), 1, &st->ret);
 	else if (ip[st->i] == 'd' || ip[st->i] == 'i')

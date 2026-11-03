@@ -3,7 +3,6 @@ NAME = libftprintf.a
 
 SRCS =	ft_printf.c\
 		ft_putchar_fd.c\
-		ft_putchar.c\
 		ft_puthex.c\
 		ft_putnbr_fd.c\
 		ft_putunbr_fd.c\
